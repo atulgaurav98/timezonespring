@@ -6,18 +6,18 @@ India, USA, UK & Australia
  */
 import com.example.bean.Country;
 import com.example.service.IgetTimeService;
-import io.micronaut.http.annotation.Controller;
-import io.micronaut.http.annotation.Get;
-import jakarta.inject.Inject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Controller
+@RestController
 public class getTimeController {
-    @Inject
+    @Autowired
     private IgetTimeService getTimeService;
 
-    @Get("/time")
+    @GetMapping("/time")
     public List<Country> getAllCountriesTime(){
         return getTimeService.getCountryTime();
     }

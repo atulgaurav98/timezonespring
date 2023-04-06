@@ -1,12 +1,12 @@
 package com.example.dao;
 
-import jakarta.inject.Singleton;
+import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-@Singleton
+@Repository
 public class getTimeDao implements IgetTimeDao{
     @Override
     public Map<String, List<String>> getCountryZoneNames() {

@@ -3,6 +3,8 @@ package com.example.service;
 import com.example.bean.Country;
 import com.example.bean.Zone;
 import com.example.dao.IgetTimeDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
